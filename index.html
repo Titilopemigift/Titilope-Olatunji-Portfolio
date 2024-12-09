@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Titilope Olatunji Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 1.0s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+/*footer*/
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: transparent;
+    text-align: center;
+    padding: 10px;
+}
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Titilope Ebunoluwa Olatunji</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url('images/TITILOPE.jpeg');">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Titilope</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'Data Analyst ',
+						'Data Engineer',
+						'Power BI Developer',
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            <h2>Data Analyst</h2>
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 2 years of experience</h2> -->
+						<!-- <br> -->
+			            <p><a href="https://www.linkedin.com/in/titilope-olatunji-b36270272/" class="btn btn-primary py-3 px-4">LinkedIn</a> 
+							<a href="https://github.com/Titilopemigift?tab=repositories" class="btn btn-white btn-outline-white py-3 px-4">My works on Github</a></p>
+							
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+									  </div>
+									</div>
+									</div>
+								  </div>
+
+								<div class="skill-mf">
+									
+									
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<p> A resourceful and results-oriented Data Analyst, driven by creativity and problem-solving. 
+									I transform raw data and insights into meaningful conclusions that support informed decision-making. 
+									With strong expertise in data analysis, ETL processes, data pipeline automation, statistical analysis, data Visualization techniques and creating 
+									insightful dashboards that identify patterns, trends, and opportunities for business growth. 
+									I leverage data-driven solutions to address business challenges and enhance understanding of customer behavior and market trend.</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>BI Tools:</span> <span>Microsoft Excel, Power BI, Tableau, Power Point, Oracle Analytical Services, SQL &amp; Python</span></li>
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="20">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+
+
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+            <p>A detail Oriented Data Analyst with over two years experience in the field of data analytics and working with large dataset and business intelligent tools such as Microsoft Excel, Power BI, Power Point, Tableau, SQL and Python
+				to drive business strategies through data-driven insights.</p>
+          </div>
+    				<p><a href="https://drive.google.com/file/d/13xGoukFicyk652CJSDO551qEf6CFBW5n/view?usp=drivesdk" class="btn btn-primary py-4 px-5">Download CV</a></p>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+   
+
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            <p>Below are the sample Data Analytics projects on Microsoft Excel, Power BI, Tableau & SQL.</p>
+          </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/Titilopemigift/PROJECT-MANAGEMENT-DASHBOARD" class="block-20 zoom-effect" style="background-image: url('images/PROJECT-MANAGEMENT.JPG');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+				
+                <h3 class="heading"><a href="https://github.com/Titilopemigift/PROJECT-MANAGEMENT-DASHBOARD">Project Management Dashboard using PowerBI</a></h3>
+                <p>Project management dashboards can facilitate communication across all involved members and improve decision-making. In this dashboard, I analyzed the dataset and identified potential risks or issues, and take corrective actions to support the project success.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/Titilopemigift/PRODUCT-REVIEW-DASHBOARD" class="block-20 zoom-effect" style="background-image: url('images/PRODUCT-REVIEW.JPG');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/Titilopemigift/PRODUCT-REVIEW-DASHBOARD">Product Review Dashboard using Power BI</a></h3>
+                <p>Product reviews play a crucial role in offering customers insights into product performance, aiding them in making well-informed purchase decisions. This dashboard provides a thorough analysis of customer reviews across various categories, representing products from multiple brands and manufacturers.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="https://github.com/Titilopemigift/Road-Accident-Dashboard" class="block-20 zoom-effect" style="background-image: url('images/ROAD-ACCIDENT.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/Titilopemigift/Road-Accident-Dashboard"> Road Accident Analysis using Microsoft Excel</a></h3>
+                <p>In this project I analysed a Road Accident Dashboard in Microsoft Excel, which serves as a valuable tool for stakeholders such as Ministry of Transport, Traffic Management Agencies, Road Safety Corps and Road Transport Department with valuable insights to make data-driven decisions and implement evidence-based interventions that enhance road safety.</p>
+              </div>
+            </div>
+          </div>
+	<div class="row d-flex">
+	  <div class="col-md-4 d-flex ftco-animate">
+		  <div class="blog-entry justify-content-end">
+		  <a href="https://github.com/Titilopemigift/Space-Mission-Dashboard" class="block-20 zoom-effect" style="background-image: url('images/SPACE-MISSION.JPG');">
+		  </a>
+		  <div class="text mt-3 float-right d-block">
+
+			<h3 class="heading"><a href="https://github.com/Titilopemigift/Space-Mission-Dashboard">Space Mission Dashboard using Power BI</a></h3>
+			<p>This dashboard offers a comprehensive view of space missions, enabling stakeholders to assess the performance of space exploration efforts over decades and across different regions.</p>
+		  </div>
+		</div>
+	  </div>
+	  
+	  <div class="col-md-4 d-flex ftco-animate">
+		<div class="blog-entry justify-content-end">
+		<a href="https://github.com/Titilopemigift/Energy-Consumption-Dashboard" class="block-20 zoom-effect" style="background-image: url('images/ENERGY-CONSUMPTION.JPG');">
+		</a>
+		<div class="text mt-3 float-right d-block">
+
+		  <h3 class="heading"><a href="https://github.com/Titilopemigift/Energy-Consumption-Dashboard">Energy Consumption Dashboard using Power BI</a></h3>
+		  <p>The project utilizes Power BI interactive visualizations to provide a comprehensive overview of energy usage across various time periods and categories. It helps to monitor consumption patterns, identify trends, and make data-driven decisions to optimize eneergy efficiency.</p>
+		</div>
+	  </div>
+	</div>
+	<div class="col-md-4 d-flex ftco-animate">
+		<div class="blog-entry">
+		<a href="https://github.com/Titilopemigift/Customer-Feedback-Analysis" class="block-20 zoom-effect" style="background-image: url('images/CUSTOMER_FEEDBACK.jpg');">
+		</a>
+		<div class="text mt-3 float-right d-block">
+
+		  <h3 class="heading"><a href="https://github.com/Titilopemigift/Customer-Feedback-Analysis"> Customer Feedback Analysis using Excel</a></h3>
+		  <p>This dashboard offers a detailed analysis of customer feedback enabling teams to assess customer satisfaction, identify areas of improvement, and enhance overall service quality.</p>
+		</div>
+	  </div>
+	</div>
+	<div class="row d-flex">
+		<div class="col-md-4 d-flex ftco-animate">
+			<div class="blog-entry justify-content-end">
+			<a href="https://github.com/Titilopemigift/HR-ANALYTICS-DASHBOARD" class="block-20 zoom-effect" style="background-image: url('images/HR-TABLEAU-DASHBOARD.jpg');">
+			</a>
+			<div class="text mt-3 float-right d-block">
+  
+			  <h3 class="heading"><a href="https://github.com/Titilopemigift/HR-ANALYTICS-DASHBOARD">HR Attrition Analysis using Tableau</a></h3>
+			  <p>This is an Attrition analytics Dashboard built on Tableau . The working of the dashboard is demonstrated below. The dashboard mainly focuses on the attrition of employees while displaying information like the active employee count, job satisfaction of employees depending on the job role, etc. The dashboard includes 5 KPIs and a variety of graphs (bar chart, pie chart, lollipop chart, histogram, and donut chart) and filters for visualizing the required data.</p>
+			</div>
+		  </div>
+		</div>
+		
+		<div class="col-md-4 d-flex ftco-animate">
+		  <div class="blog-entry justify-content-end">
+		  <a href="https://github.com/Titilopemigift/Data-Science-Salaries-Dashboard" class="block-20 zoom-effect" style="background-image: url('images/DATA-SCIENCE.jpg');">
+		  </a>
+		  <div class="text mt-3 float-right d-block">
+  
+			<h3 class="heading"><a href="https://github.com/Titilopemigift/Data-Science-Salaries-Dashboard">Data Science Jobs Salaries Dashboard using Tableau</a></h3>
+			<p> With the rise of big data, Data Science has become essential in various industries - such as healthcare, finance, e-commerce and technology - where it helps solve complex problem and optimize operations. This dashboard is designed to support job seekers, employers, and analysts by providing a comprehensive look at current trends and patterns in data science employment and salaries.</p>
+		  </div>
+		</div>
+	  </div>
+	  <div class="col-md-4 d-flex ftco-animate">
+		  <div class="blog-entry">
+		  <a href="https://github.com/Titilopemigift/My-LinkedIn-Dashboard" class="block-20 zoom-effect" style="background-image: url('images/LINKEDlN-IMAGE.JPG');">
+		  </a>
+		  <div class="text mt-3 float-right d-block">
+  
+			<h3 class="heading"><a href="https://github.com/Titilopemigift/My-LinkedIn-Dashboard"> LinkedIn Profile Analysis using Power BI</a></h3>
+			<p>LinkedIn holds a treasure trove of data that can provide valuable insights into your profile and networking activities. In this report I transformed raw data into meaningful visualizations and derived meaningful insights that can unlock the full potential of your LinkedIn profile using Microsoft Power BI.</p>
+		  </div>
+		</div>
+	  </div>
+	<br>
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Below are the details to reach out to me!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p>Lagos, Nigeria
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="titilopeolatunji1@gmail.com">titilopeolatunji1@gmail.com</a></p>
+	          </div>
+          </div>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt">Find me on  </li>
+					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/titilope-olatunji-b36270272/"><span class="icon-linkedin"></span></a></li>  
+					  
+					</ul>
+				<br>
+		   </div>
+   </div>
+ </section>
+
+
+ 
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    <footer>
+		<p>&copy; 2024 Titilope Olatunji. All rights reserved.</p>
+	</footer>
+  </body>
+</html>
